@@ -1,0 +1,60 @@
+{
+  "name": "skeleton-webpack-react",
+  "version": "1.0.0",
+  "description": "The basic webpack config for a react component.",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development  webpack-dev-server --mode development --config webpack.dev.config.js --color --open --progress",
+    "build": "NODE_ENV=production  webpack --mode production --config webpack.prod.config.js --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdak/skeleton-webpack-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdak/skeleton-webpack-react/issues"
+  },
+  "homepage": "https://github.com/rdak/skeleton-webpack-react#readme",
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "@types/redux": "^3.6.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^3.5.0",
+    "tslint": "^5.11.0",
+    "tslint-react": "3.4.0",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "autoprefixer": "^9.5.0",
+    "fork-ts-checker-webpack-plugin": "^1.0.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.0",
+    "react-hot-loader": "^4.3.12",
+    "webpack-merge": "^4.2.1"
+  }
+}
