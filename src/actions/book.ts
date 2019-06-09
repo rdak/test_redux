@@ -80,6 +80,9 @@ export function doUpdateBook(bookId: number, data: number) {
 }
 
 export function doRandomUpdate(items: IBook[]) {
+  /**
+  should be some useful code
+   */
   return (dispatch) => {
     dispatch(doUpdateBook(1, 123));
   };

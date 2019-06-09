@@ -1,7 +1,7 @@
 import { IAction, ACTION_STATUS, ACTION } from "../actions/action";
-import { IBook, IBookCollection } from "../interfaces/book";
+import * as Interfaces from "../interfaces";
 
-function bookReducer(state: IBookCollection, action: IAction<any>) {
+function bookReducer(state: Interfaces.Book.IBookCollection, action: IAction<any>) {
 
   switch (action.type) {
 
@@ -9,7 +9,7 @@ function bookReducer(state: IBookCollection, action: IAction<any>) {
       if (action.status === ACTION_STATUS.SUCCESS && state.items) {
         return {
           ...state,
-          items: state.items.map((item: IBook) => {
+          items: state.items.map((item: Interfaces.Book.IBook) => {
 
             if (item.id === action.data.id)
               return Object.assign({}, item, action.data);
@@ -36,8 +36,7 @@ export function collectionReducer<T>(
 
   return (state = defaultState, action) => {
 
-    if (bookReducer)
-      state = bookReducer(state, action);
+    state = bookReducer(state, action);
 
     if (action.type !== actionType) {
       return state;

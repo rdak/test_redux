@@ -1,56 +1,53 @@
 import { combineReducers } from "redux";
 import * as Interfaces from "../interfaces";
-import { IAction, ACTION } from "../actions/action";
+import { ACTION } from "../actions/action";
 import { collectionReducer } from "./book";
 import { IBookCollection } from "../interfaces/book";
 
-export interface IEntityState<T> {
-  [K: string]: T;
-  [K: number]: T;
-}
+/*
+  export interface IEntityState<T> {
+    [K: string]: T;
+    [K: number]: T;
+  }
 
-/**
- * Session reducer
- * @param state Current state
- * @param action Action
- */
-export function entityReducer<T>(entityType: string) {
+  export function entityReducer<T>(entityType: string) {
 
-  return (state: IEntityState<T> = {}, action: IAction<any>) => {
+    return (state: IEntityState<T> = {}, action: IAction<any>) => {
 
-    // Cache entities
-    if (action.entities && action.entities[entityType]) {
-      const entities = action.entities[entityType];
-      const newState = { ...state };
+      // Cache entities
+      if (action.entities && action.entities[entityType]) {
+        const entities = action.entities[entityType];
+        const newState = { ...state };
 
-      for (const id in entities) {
+        for (const id in entities) {
 
-        if (entities[id] === null && newState[id]) {
+          if (entities[id] === null && newState[id]) {
 
-          delete newState[id];
+            delete newState[id];
 
-        } else {
+          } else {
 
-          if (state[id])
-            newState[id] = Object.assign({}, state[id], entities[id]);
-          else
-            newState[id] = entities[id];
+            if (state[id])
+              newState[id] = Object.assign({}, state[id], entities[id]);
+            else
+              newState[id] = entities[id];
+
+          }
 
         }
 
+        return newState;
+
       }
 
-      return newState;
+      return state;
 
-    }
+    };
 
-    return state;
+  }
+ */
 
-  };
-
-}
-
-export interface IStore {
+ export interface IStore {
   books: IBookCollection;
 }
 

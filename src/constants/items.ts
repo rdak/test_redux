@@ -1,5 +1,5 @@
 /**
- * it was made with https://www.json-generator.com/
+ * it's done with https://www.json-generator.com/
  * settings:
   [
     '{{repeat(10, 10)}}',

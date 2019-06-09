@@ -1,5 +1,3 @@
-// import { ICollection } from "../interfaces/shared";
-
 /**
  * Actions enum
  */

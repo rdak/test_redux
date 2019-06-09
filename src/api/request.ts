@@ -1,6 +1,3 @@
-// import { API_URL, API_REQUEST_TIMEOUT, API_MOCK_DELAY_MIN, API_MOCK_DELAY_MAX } from "../config";
-// import { setTimeout } from "timers";
-
 export const API_URL = "server";
 
 /**
