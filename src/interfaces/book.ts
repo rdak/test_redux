@@ -5,11 +5,12 @@ export interface IBook {
   id: number;
   name: string;
   description: string;
-  vote: number;
+  ranking: number;
 }
 
 export interface IBookDetails {
-  vote: number;
+  id: number;
+  ranking: number;
 }
 
 /**

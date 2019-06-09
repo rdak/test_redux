@@ -5,7 +5,7 @@
  */
 export enum ACTION {
   BOOK_LIST_FETCH = "book_list_fetch",
-  BOOK_VOTE = "book_vote",
+  BOOK_VOTE = "book_rank",
 }
 
 /**
@@ -14,8 +14,7 @@ export enum ACTION {
 export enum ACTION_STATUS {
   REQUEST = "request",
   SUCCESS = "success",
-  FAILURE = "failure",
-  // RESET = "reset"
+  FAILURE = "failure"
 }
 
 /**

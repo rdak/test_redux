@@ -3,7 +3,8 @@
 // import Interfaces from "../interfaces/";
 import * as Interfaces from "../interfaces";
 import { mockRequest, HTTP_STATUS, HTTP_METHOD } from "./request";
-import { IBook } from "../interfaces/book";
+import { IBook, IBookDetails } from "../interfaces/book";
+import items from "../constants/items";
 
 // import { IPermissionResponse, IAssignedRoles } from "../interfaces/Permission";
 // import { IUser } from "../interfaces/User";
@@ -20,32 +21,23 @@ export function getBookCollection() {
     {},
     {},
     HTTP_STATUS.OK,
-    [
-      {
-        id: 1,
-        name: "test",
-        description: "test",
-        vote: 0
-      },
-      {
-        id: 2,
-        name: "test 2",
-        description: "test 2",
-        vote: 213
-      }
-    ]
+    items
   );
 
 }
 
-export function updateBook(bookId: number) {
+export function updateBook(bookId: number, rank: number) {
 
-  return mockRequest<null>(
+  return mockRequest<IBookDetails>(
     HTTP_METHOD.PUT,
     `/books/${bookId}`,
     null,
     null,
-    HTTP_STATUS.OK
+    HTTP_STATUS.OK,
+    {
+      id: bookId,
+      ranking: Number(rank)
+    }
   );
 
 }

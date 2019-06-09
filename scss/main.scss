@@ -30,19 +30,17 @@ body, html{
 
 .book-list{
   padding: 20px;
-  h1{
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 15px;
-  }
+  width: 500px;
 }
 
 .book{
-  // display: flex;
-  width: 500px;
+  display: flex;
   padding: 20px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+  justify-content: space-between;
+  align-content: center;
+
   &__title{
     font-size: 14px;
     line-height: 20px;
@@ -51,5 +49,20 @@ body, html{
   &__description{
     font-size: 12px;
     line-height: 18px;
+  }
+
+}
+
+.book-list{
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  &__title{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px;
   }
 }
