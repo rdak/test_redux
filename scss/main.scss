@@ -6,3 +6,50 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body, html{
+  height: 100%;
+}
+
+#app-container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.container{
+  flex-grow: 1;
+}
+
+.header,
+.footer{
+  text-align: center;
+  padding: 10px;
+  background: #ccc;
+}
+
+.book-list{
+  padding: 20px;
+  h1{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+}
+
+.book{
+  // display: flex;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  &__title{
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__description{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

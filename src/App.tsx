@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Header, Footer } from "./components";
+import { BookList } from "./containers";
 
 /**
  * Main Component
@@ -8,7 +10,11 @@ export class App extends Component<{}, {}> {
   public render() {
     return (
       <>
-        <h1>Everything is fine.</h1>
+        <Header />
+        <div className="container">
+          <BookList />
+        </div>
+        <Footer />
       </>
     );
   }
